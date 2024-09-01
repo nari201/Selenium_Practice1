@@ -1,0 +1,7 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="TestNg_Suite">
+  <test name="TestNg_Test">
+  </test> <!-- TestNg_Test -->
+</suite> <!-- TestNg_Suite -->
+
+

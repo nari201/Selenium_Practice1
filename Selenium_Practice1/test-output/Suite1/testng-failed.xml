@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite1]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Parameters(failed)">
+    <parameter name="Email" value="nani@gmail.om"/>
+    <parameter name="FirstName" value="nari"/>
+    <parameter name="LastName" value="setti"/>
+    <parameter name="Url" value="https://demowebshop.tricentis.com/register"/>
+    <parameter name="Password" value="test22"/>
+    <classes>
+      <class name="testNg.Phase2.Parametertest">
+        <methods>
+          <include name="Parameters"/>
+        </methods>
+      </class> <!-- testNg.Phase2.Parametertest -->
+    </classes>
+  </test> <!-- Parameters(failed) -->
+</suite> <!-- Failed suite [Suite1] -->

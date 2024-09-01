@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Context context menu(Right Click) title here</title>
+
+<style type="text/css">
+
+* {margine = 0;padding = 0;
+	
+}
+
+html, body, .container {
+	height: 100%;
+}
+
+body {
+	font-family: verdana;
+	font-size: 10px;
+}
+
+.container {
+	background: #f6f6f6;
+}
+
+.context-menu {
+	widht: 200px;
+	height: auto;
+	box-shadow: 0 0 20px 0 #ccc;
+}
+
+.context-menu ul {
+	list-style: none;
+	padding: 5px 0px 5px 0px;
+}
+
+.context-menu ul li:not(.separator){
+padding :5px 0px 5px 0px;
+border-left: 4px solid transperent;
+cursor : ponter;
+}
+.context-menu ul li:hover {
+	background: #eee;
+	border-left: 4px solid #666;
+}
+
+.separator {
+	height: 1px;
+	background: #dedede;
+	margin: 2px 0px 2px 0px;
+}
+</style>
+
+</head>
+<body>
+
+	<div class="container" oncontextmenu="return showContextMenu();">
+		<div id="contextMenu" class="context-menu">
+			<ul>
+				<li>Add event</li>
+				<li>Show the context menu</li>
+				<li class="separator"></li>
+				<li>Hide Mouse click</li>
+				<li>Hide on escape key</li>
+			</ul>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		window.onclick = hideContextMenu;
+
+		window.onkeydown = listenKeys;
+
+		var contextMenu = document.getElementById('contextMenu');
+		function showContextMenu(event) {
+			contextMenu.style.dislay = 'block'
+
+			contextMenu.style.left = event.clientX + 'px';
+
+			contextMenu.style.top = event.clientY + 'px';
+
+			return false;
+		}
+
+		function hideContextMenu() {
+			contextMenu.style.display = 'none';
+
+		}
+		function listenKeys() {
+			
+			var keyCode = event.which || event.keyCode;
+			
+			if(keyCode == 27){
+				hideContextMenu();
+					
+			}
+
+		}
+	</script>
+
+</body>
+</html>
