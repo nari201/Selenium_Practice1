@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://p1.selenium"
+	xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://p1.selenium"
+	xmlns:intf="http://p1.selenium" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<!--WSDL created by Apache Axis version: 1.4 Built on Apr 22, 2006 (06:55:48 
+		PDT) -->
+	<wsdl:types>
+		<schema elementFormDefault="qualified" targetNamespace="http://p1.selenium"
+			xmlns="http://www.w3.org/2001/XMLSchema">
+			<element name="main">
+				<complexType>
+					<sequence>
+						<element maxOccurs="unbounded" name="args" type="xsd:string" />
+					</sequence>
+				</complexType>
+			</element>
+			<element name="mainResponse">
+				<complexType />
+			</element>
+			<element name="scan_read">
+				<complexType />
+			</element>
+			<element name="scan_readResponse">
+				<complexType />
+			</element>
+			<element name="Flights">
+				<complexType />
+			</element>
+			<element name="FlightsResponse">
+				<complexType />
+			</element>
+			<element name="Demo">
+				<complexType />
+			</element>
+			<element name="DemoResponse">
+				<complexType />
+			</element>
+			<element name="youtube">
+				<complexType />
+			</element>
+			<element name="youtubeResponse">
+				<complexType />
+			</element>
+		</schema>
+	</wsdl:types>
+
+	<wsdl:message name="youtubeRequest">
+
+		<wsdl:part element="impl:youtube" name="parameters">
+
+		</wsdl:part>
+
+	</wsdl:message>
+
+	<wsdl:message name="DemoRequest">
+
+		<wsdl:part element="impl:Demo" name="parameters">
+
+		</wsdl:part>
+
+	</wsdl:message>
+
+	<wsdl:message name="mainResponse">
+
+		<wsdl:part element="impl:mainResponse" name="parameters">
+
+		</wsdl:part>
+
+	</wsdl:message>
+
+	<wsdl:message name="DemoResponse">
+
+		<wsdl:part element="impl:DemoResponse" name="parameters">
+
+		</wsdl:part>
+
+	</wsdl:message>
+
+	<wsdl:message name="mainRequest">
+
+		<wsdl:part element="impl:main" name="parameters">
+
+		</wsdl:part>
+
+	</wsdl:message>
+
+	<wsdl:message name="scan_readRequest">
+
+		<wsdl:part element="impl:scan_read" name="parameters">
+
+		</wsdl:part>
+
+	</wsdl:message>
+
+	<wsdl:message name="FlightsRequest">
+
+		<wsdl:part element="impl:Flights" name="parameters">
+
+		</wsdl:part>
+
+	</wsdl:message>
+
+	<wsdl:message name="FlightsResponse">
+
+		<wsdl:part element="impl:FlightsResponse" name="parameters">
+
+		</wsdl:part>
+
+	</wsdl:message>
+
+	<wsdl:message name="youtubeResponse">
+
+		<wsdl:part element="impl:youtubeResponse" name="parameters">
+
+		</wsdl:part>
+
+	</wsdl:message>
+
+	<wsdl:message name="scan_readResponse">
+
+		<wsdl:part element="impl:scan_readResponse" name="parameters">
+
+		</wsdl:part>
+
+	</wsdl:message>
+
+	<wsdl:portType name="Browser">
+
+		<wsdl:operation name="main">
+
+			<wsdl:input message="impl:mainRequest" name="mainRequest">
+
+			</wsdl:input>
+
+			<wsdl:output message="impl:mainResponse" name="mainResponse">
+
+			</wsdl:output>
+
+		</wsdl:operation>
+
+		<wsdl:operation name="scan_read">
+
+			<wsdl:input message="impl:scan_readRequest" name="scan_readRequest">
+
+			</wsdl:input>
+
+			<wsdl:output message="impl:scan_readResponse" name="scan_readResponse">
+
+			</wsdl:output>
+
+		</wsdl:operation>
+
+		<wsdl:operation name="Flights">
+
+			<wsdl:input message="impl:FlightsRequest" name="FlightsRequest">
+
+			</wsdl:input>
+
+			<wsdl:output message="impl:FlightsResponse" name="FlightsResponse">
+
+			</wsdl:output>
+
+		</wsdl:operation>
+
+		<wsdl:operation name="Demo">
+
+			<wsdl:input message="impl:DemoRequest" name="DemoRequest">
+
+			</wsdl:input>
+
+			<wsdl:output message="impl:DemoResponse" name="DemoResponse">
+
+			</wsdl:output>
+
+		</wsdl:operation>
+
+		<wsdl:operation name="youtube">
+
+			<wsdl:input message="impl:youtubeRequest" name="youtubeRequest">
+
+			</wsdl:input>
+
+			<wsdl:output message="impl:youtubeResponse" name="youtubeResponse">
+
+			</wsdl:output>
+
+		</wsdl:operation>
+
+	</wsdl:portType>
+
+	<wsdl:binding name="BrowserSoapBinding" type="impl:Browser">
+
+		<wsdlsoap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+
+		<wsdl:operation name="main">
+
+			<wsdlsoap:operation soapAction="" />
+
+			<wsdl:input name="mainRequest">
+
+				<wsdlsoap:body use="literal" />
+
+			</wsdl:input>
+
+			<wsdl:output name="mainResponse">
+
+				<wsdlsoap:body use="literal" />
+
+			</wsdl:output>
+
+		</wsdl:operation>
+
+		<wsdl:operation name="scan_read">
+
+			<wsdlsoap:operation soapAction="" />
+
+			<wsdl:input name="scan_readRequest">
+
+				<wsdlsoap:body use="literal" />
+
+			</wsdl:input>
+
+			<wsdl:output name="scan_readResponse">
+
+				<wsdlsoap:body use="literal" />
+
+			</wsdl:output>
+
+		</wsdl:operation>
+
+		<wsdl:operation name="Flights">
+
+			<wsdlsoap:operation soapAction="" />
+
+			<wsdl:input name="FlightsRequest">
+
+				<wsdlsoap:body use="literal" />
+
+			</wsdl:input>
+
+			<wsdl:output name="FlightsResponse">
+
+				<wsdlsoap:body use="literal" />
+
+			</wsdl:output>
+
+		</wsdl:operation>
+
+		<wsdl:operation name="Demo">
+
+			<wsdlsoap:operation soapAction="" />
+
+			<wsdl:input name="DemoRequest">
+
+				<wsdlsoap:body use="literal" />
+
+			</wsdl:input>
+
+			<wsdl:output name="DemoResponse">
+
+				<wsdlsoap:body use="literal" />
+
+			</wsdl:output>
+
+		</wsdl:operation>
+
+		<wsdl:operation name="youtube">
+
+			<wsdlsoap:operation soapAction="" />
+
+			<wsdl:input name="youtubeRequest">
+
+				<wsdlsoap:body use="literal" />
+
+			</wsdl:input>
+
+			<wsdl:output name="youtubeResponse">
+
+				<wsdlsoap:body use="literal" />
+
+			</wsdl:output>
+
+		</wsdl:operation>
+
+	</wsdl:binding>
+
+	<wsdl:service name="BrowserService">
+
+		<wsdl:port binding="impl:BrowserSoapBinding" name="Browser">
+
+			<wsdlsoap:address location="http://tempuri.org/Selenium_p1/services/Browser" />
+
+		</wsdl:port>
+
+	</wsdl:service>
+
+</wsdl:definitions>
